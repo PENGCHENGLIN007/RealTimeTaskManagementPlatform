@@ -1,4 +1,4 @@
-package com.zk.graduation.common;
+package com.zk.graduation.metadata.common;
 
 /**
  * @author pengchenglin

@@ -1,7 +1,6 @@
 package com.zk.graduation.flink;
 
-import com.zk.graduation.common.Column;
-import com.zk.graduation.common.DataType;
+import com.zk.graduation.metadata.common.Column;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
 import org.apache.flink.api.common.typeinfo.Types;
 
@@ -20,7 +19,7 @@ public class DataTypeUtil {
      * @param list
      * @return
      */
-    public TypeInformation[] getDataTypes(List list){
+    public static TypeInformation[] getDataTypes(List list){
         TypeInformation[] typeInformations =  new TypeInformation[list.size()];
 
         for (int i = 0; i < list.size(); i++) {
