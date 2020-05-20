@@ -46,4 +46,6 @@ public class KafkaSinkInfo extends SinkInfo {
     public void setSinkColumnList(List<Column> sinkColumnList) {
         this.sinkColumnList = sinkColumnList;
     }
+
+
 }
