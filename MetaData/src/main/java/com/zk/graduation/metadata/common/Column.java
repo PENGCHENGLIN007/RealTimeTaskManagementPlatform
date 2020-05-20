@@ -1,12 +1,14 @@
 package com.zk.graduation.metadata.common;
 
+import java.io.Serializable;
+
 /**
  * 列信息
  *
  * @author pengchenglin
  * @create 2020-05-15 17:38
  */
-public class Column {
+public class Column implements Serializable {
 
     private int index;
     private String name;

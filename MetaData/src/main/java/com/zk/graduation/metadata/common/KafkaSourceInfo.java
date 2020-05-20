@@ -46,4 +46,14 @@ public class KafkaSourceInfo extends SourceInfo {
     public void setSourceColumnList(List<Column> sourceColumnList) {
         this.sourceColumnList = sourceColumnList;
     }
+
+    public String getSourceFields(){
+        StringBuilder sourceFields = new StringBuilder();
+        for(Column column:sourceColumnList){
+            String field = column.getName();
+            sourceFields.append(field).append(",");
+        }
+        sourceFields.substring(0,sourceFields.length()-1);
+        return sourceFields.toString();
+    }
 }

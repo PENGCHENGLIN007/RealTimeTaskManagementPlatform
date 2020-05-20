@@ -1,4 +1,4 @@
-package com.zk.graduation.flink;
+package com.zk.graduation.flink.util;
 
 import com.zk.graduation.metadata.common.Column;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
