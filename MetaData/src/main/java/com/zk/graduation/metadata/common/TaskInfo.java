@@ -8,17 +8,27 @@ package com.zk.graduation.metadata.common;
  */
 public class TaskInfo {
 
+    private int userId;
     private SourceInfo sourceInfo;
     private SinkInfo sinkInfo;
     private String sql;
-    private String taskId;
+    private int taskId;
     private String taskName;
 
     public TaskInfo(){}
 
-    public TaskInfo(String taskId){
+    public TaskInfo(int taskId){
         this.taskId = taskId;
     }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
 
     public SourceInfo getSourceInfo() {
         return sourceInfo;
@@ -44,11 +54,11 @@ public class TaskInfo {
         this.sql = sql;
     }
 
-    public String getTaskId() {
+    public int getTaskId() {
         return taskId;
     }
 
-    public void setTaskId(String taskId) {
+    public void setTaskId(int taskId) {
         this.taskId = taskId;
     }
 

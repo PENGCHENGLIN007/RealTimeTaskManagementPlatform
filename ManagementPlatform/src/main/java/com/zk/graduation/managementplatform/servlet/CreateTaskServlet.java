@@ -33,9 +33,16 @@ public class CreateTaskServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String userName = (String) session.getAttribute("userName");
 
-        if("".equals(userName)){
+        response.setContentType("text/html;charset=utf-8");
+        PrintWriter writer = response.getWriter();
+
+        if(userName==null ||"".equals(userName)){
             log.error("failed to create task, please login first! ");
-            response.sendRedirect("/userLogin.html");
+            writer.println("创建失败！请先登录！");
+            writer.flush();
+            writer.close();
+            return;
+            //response.sendRedirect("/userLogin.html");
         }
         
 
@@ -78,15 +85,17 @@ public class CreateTaskServlet extends HttpServlet {
         }catch (Exception e){
             String errorMessage = e.getMessage();
             log.info("创建失败：{}",errorMessage);
-            response.setContentType("text/html;charset=utf-8");
-            PrintWriter writer = response.getWriter();
             writer.println("创建失败！"+e.toString());
+            writer.flush();
+            writer.close();
             return;
         }
+        writer.println("创建成功！");
+        writer.flush();
+        writer.close();
 
 
-
-        response.sendRedirect("/allTaskList.html");
+       // response.sendRedirect("/allTaskList.jsp");
     }
 
     @Override

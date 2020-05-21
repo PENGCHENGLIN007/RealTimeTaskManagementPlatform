@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%
+String userName = (String) session.getAttribute("userName");
+if(userName==null) userName="";
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,10 +55,11 @@
 <div id='box'>
     <div id='logo'>
         <span style="font-size:40px;margin-left:100px;margin-top: 20px">实时计算任务管理平台</span>
+        <span style="font-size:15px;margin-left:900px;margin-top: 20px;color: blue;"><%=userName%></span>
     </div>
     <div id='nav'>
         <ul type='none' style="font-size:20px;margin-left:0px;margin-top:100px;">
-            <li style="border:2px solid  #64d6ff;"><a style="text-decoration:none;"  href="allTaskList.html" target="iframe_main">全部任务</a></li>
+            <li style="border:2px solid  #64d6ff;"><a style="text-decoration:none;" href="/user/getAllTask.do" target="iframe_main">全部任务</a></li>
             <li style="border:2px solid  #64d6ff;"><a style="text-decoration:none;"  href="createTask.html" target="iframe_main">创建任务</a></li>
             <li style="border:2px solid  #64d6ff;"><a style="text-decoration:none;"  href="runningTaskList.html" target="iframe_main">运行中任务</a></li>
         </ul>

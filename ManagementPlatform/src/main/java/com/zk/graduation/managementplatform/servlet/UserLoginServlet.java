@@ -35,9 +35,10 @@ public class UserLoginServlet extends HttpServlet {
 
             return;
         }
+        request.getSession().setAttribute("userName",userName);
 
 
-        response.sendRedirect("/userMain.html");
+        response.sendRedirect("/userMain.jsp");
     }
 
     @Override

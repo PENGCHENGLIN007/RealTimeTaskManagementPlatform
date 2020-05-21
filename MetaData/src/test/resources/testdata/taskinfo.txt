@@ -1,0 +1,12 @@
+source1
+KAFKA
+id int,name varchar,amount double
+bootstrap.servers=localhost:9092,topic=source1,group.id=a
+
+sink1
+KAFKA
+total double
+bootstrap.servers=localhost:9092,topic=sink1
+
+计算总金额-一分钟窗口
+select sum(amount) from source1 group by TUMBLE(proctime, INTERVAL ''1'' MINUTE);

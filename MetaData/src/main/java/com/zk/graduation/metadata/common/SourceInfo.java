@@ -1,5 +1,8 @@
 package com.zk.graduation.metadata.common;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * 输入源信息
  *
@@ -77,5 +80,23 @@ public class SourceInfo {
 
     public void setSchema(String schema) {
         this.schema = schema;
+    }
+
+    public List<ColumnInfo> getColumnList(){
+        List<ColumnInfo> columnInfoList = new LinkedList<>();
+        String[] columnArray = schema.split(",");
+        for(int i = 0;i<columnArray.length;i++){
+            columnArray[i] = columnArray[i].trim();
+            String columnName = columnArray[i].split("\\s+")[0];
+            String dataType = columnArray[i].split("\\s+")[1];
+            ColumnInfo columnInfo = new ColumnInfo();
+            columnInfo.setName(columnName);
+            columnInfo.setDataType(dataType);
+            columnInfo.setIndex(i);
+            columnInfo.setTableId(id);
+            columnInfo.setTableType("SOURCE");
+            columnInfoList.add(columnInfo);
+        }
+        return columnInfoList;
     }
 }
