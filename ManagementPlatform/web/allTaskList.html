@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" action="/user/login.do">
+    <div class="name">
+        <label>用户账号：</label>
+        <input type="text" name="userName" id="" tabindex="1" autocomplete="off" />
+    </div>
+    <div class="password">
+        <p>
+            <label>密  码：</label>
+            <input type="password" name="userPassword" maxlength="16" id="" tabindex="2"/>
+        </p>
+        <p>&nbsp;</p>
+    </div>
+    <div class="error"><text id="errorMessage" style="color:#ff0000;font-size:20px"></text>
+    </div>
+    <p>&nbsp;</p>
+    <div class="login">
+        <button type="submit" tabindex="5">登录</button>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{font-family:Microsoft YaHei,Segoe UI,Tahoma,Arial,Verdana,sans-serif;font-size:12px;color:#fff;height:100%;line-height:1;background:#999}
+        .name{font-size:16px;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+    </style>
+</head>
+<body>
+<div ><h1 align="center">任务创建</h1></div>
+<HR align=center width=100% color=#987cb9 SIZE=1>
+
+<div ><h2 align="left">输入源定义</h2></div>
+<HR align=center width=100% color=#987cb9 SIZE=1>
+
+<form name="createTask" id="createTask" method="post" action="/user/createTask.do">
+    <div class="name">
+        <label>名称：</label>
+        <input type="text" name="sourceName" id="" size="20" tabindex="1" autocomplete="off" />
+    </div>
+    <div class="name">
+        <label>类型：</label>
+        <input type="text" name="sourceType" id="" size="10" tabindex="1" autocomplete="off" />
+    </div>
+    <div class="name">
+        <label>字段：</label>
+        <input type="text" name="sourceFields" id="" size="100" tabindex="1" autocomplete="off" />
+    </div>
+    <div class="name">
+        <label>参数：</label>
+        <input type="text" name="sourceProperties" id="" size="100" tabindex="1" autocomplete="off" />
+    </div>
+
+
+<div ><h2 align="left">输出源定义</h2></div>
+<HR align=center width=100% color=#987cb9 SIZE=1>
+
+
+    <div class="name">
+        <label>名称：</label>
+        <input type="text" name="sinkName" id="" size="20" tabindex="1" autocomplete="off" />
+    </div>
+    <div class="name">
+        <label>类型：</label>
+        <input type="text" name="sinkType" id="" size="10" tabindex="1" autocomplete="off" />
+    </div>
+    <div class="name">
+        <label>字段：</label>
+        <input type="text" name="sinkFields" id="" size="100" tabindex="1" autocomplete="off" />
+    </div>
+    <div class="name">
+        <label>参数：</label>
+        <input type="text" name="sinkProperties" id="" size="100" tabindex="1" autocomplete="off" />
+    </div>
+
+
+
+
+<div ><h2 align="left">任务定义</h2></div>
+<HR align=center width=100% color=#987cb9 SIZE=1>
+
+<div class="name">
+    <label>名称：</label>
+    <input type="text" name="taskName" id="" tabindex="1" autocomplete="off" />
+</div>
+
+</form>
+
+<div class="name">
+    <label>SQL：</label>
+    <br>
+    <textarea   name="taskSql" id="" form="createTask"  rows="8" cols="50" ></textarea>
+</div>
+
+<div class="login">
+    <button type="submit" form="createTask" tabindex="5">创建</button>
+</div>
+
+
+
+</body>
+</html>

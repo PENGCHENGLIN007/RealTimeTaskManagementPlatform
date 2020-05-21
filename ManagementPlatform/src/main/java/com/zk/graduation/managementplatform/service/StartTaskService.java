@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
  */
 
 @Slf4j
-public class StartTask {
+public class StartTaskService {
 
     public void execute(int taskId){
 

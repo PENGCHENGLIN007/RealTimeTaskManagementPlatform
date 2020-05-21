@@ -37,7 +37,7 @@ public class UserLoginServlet extends HttpServlet {
         }
 
 
-        response.sendRedirect("/index.jsp");
+        response.sendRedirect("/userMain.html");
     }
 
     @Override
